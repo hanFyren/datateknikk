@@ -5,6 +5,15 @@ using namespace std;
 
 int main() //hovedprogram
 {
+    double l,b; //Definerer variabler
+
     cout<<"Hello world!"<<endl;
-   return 0; 
+    cout<< "Skriv inn lengde og bredde: ";
+    cin >> l >> b;
+    
+    double areal = l * b;
+
+    cout << "Arealet er:  " << areal << endl;
+    return 0; 
+
 }
