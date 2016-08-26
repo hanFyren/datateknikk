@@ -5,8 +5,7 @@ using namespace std;
 
 
 int main() {
-
-	string expression;
+	//initializing variables 
 	double a=0;
 	double b=0;
 	double c=0;
@@ -17,12 +16,19 @@ int main() {
 	cout << "please enter a 2nd funcion in this format \n" ;
 	cout << "a*x^2 + b*x + c \n" ;
 	cin >> a >> b >> c; 
-
-
 	//cout << "you have entered.. a=" << a << " b=" << b << " c=" c << "\n";;;
 
+	//2nd degree equation: -b /2a +- sqrt(b^2 - 4ac)/2a
+
+	//in both roots the first part is the same
  	root1 = - b / (2 * a);
  	root2 = root1;
+
+ 	//multiply the expression inside the for solution evaluation
+
+ 	//if positive - two solutions 
+ 	//if negative - conjugated imaginary solution
+ 	//if zero - one solution
 
  	sq_exp = pow(b,2) - ( 4 * a * c);
 
@@ -31,26 +37,29 @@ int main() {
  	// imaginary solutions
  	if (sq_exp < 0) {
  		cout << "imaginary roots\n";
- 		//TODO: not fnished! 
+ 		// iot work with real numbers  
  		sq_exp = sq_exp * -1;
+ 		// finishing the equation
  		sq_exp = sqrt(sq_exp);
+ 		// -------||------
  		sq_exp = sq_exp / (2 * a);
 
- 		cout << "x1=" << root1 << "+"<< sq_exp;
- 		cout << "x1=" << root1 << "-"<< sq_exp;  
+ 		// spit out data 
+ 		cout << "x1=" << root1 << "+"<< sq_exp << "\n";
+ 		cout << "x1=" << root1 << "-"<< sq_exp << "\n";  
  	}
  	// one root
  	else if (sq_exp == 0) {
  		cout << "one root:\n";
  		cout << "x=" << root1 << "\n";
  	}
- 	else // two roots
+ 	// two roots
+ 	else {
  		cout << "two roots:\n";
  		root1= root1 + sqrt(sq_exp) / (2*a);
  		root2= root2 - sqrt(sq_exp) / (2*a);
  		cout << "x1=" << root1 << " x2=" << root2 << "\n";
-
-	// -b/2*a +- sqrt (b^2-4ac)/2*a
-
+ 	}
+ 	// exit this shiiiit
 	return 0;
 }
