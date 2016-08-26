@@ -34,8 +34,21 @@ int main() {
 
 
 
- 	// imaginary solutions
- 	if (sq_exp < 0) {
+
+ 	// one root
+ 	if (sq_exp == 0) {
+ 		cout << "one root:\n";
+ 		cout << "x=" << root1 << "\n";
+ 	}
+ 	// two roots
+ 	else if (sq_exp > 0) {
+ 		cout << "two roots:\n";
+ 		root1= root1 + sqrt(sq_exp) / (2*a);
+ 		root2= root2 - sqrt(sq_exp) / (2*a);
+ 		cout << "x1=" << root1 << "\n x2=" << root2 << "\n";
+ 	}
+ 	 	// imaginary solutions
+ 	else {
  		cout << "imaginary roots\n";
  		// iot work with real numbers  
  		sq_exp = sq_exp * -1;
@@ -46,19 +59,7 @@ int main() {
 
  		// spit out data 
  		cout << "x1=" << root1 << "+"<< sq_exp << "i \n";
- 		cout << "x1=" << root1 << "-"<< sq_exp << "i \n";  
- 	}
- 	// one root
- 	else if (sq_exp == 0) {
- 		cout << "one root:\n";
- 		cout << "x=" << root1 << "\n";
- 	}
- 	// two roots
- 	else {
- 		cout << "two roots:\n";
- 		root1= root1 + sqrt(sq_exp) / (2*a);
- 		root2= root2 - sqrt(sq_exp) / (2*a);
- 		cout << "x1=" << root1 << " x2=" << root2 << "\n";
+ 		cout << "x2=" << root1 << "-"<< sq_exp << "i \n";  
  	}
  	// exit this shiiiit
 	return 0;
