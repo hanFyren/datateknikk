@@ -45,8 +45,8 @@ int main() {
  		sq_exp = sq_exp / (2 * a);
 
  		// spit out data 
- 		cout << "x1=" << root1 << "+"<< sq_exp << "\n";
- 		cout << "x1=" << root1 << "-"<< sq_exp << "\n";  
+ 		cout << "x1=" << root1 << "+"<< sq_exp << "i \n";
+ 		cout << "x1=" << root1 << "-"<< sq_exp << "i \n";  
  	}
  	// one root
  	else if (sq_exp == 0) {
