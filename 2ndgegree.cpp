@@ -5,8 +5,7 @@ using namespace std;
 
 
 int main() {
-
-	string expression;
+	//initializing variables 
 	double a=0;
 	double b=0;
 	double c=0;
@@ -38,11 +37,14 @@ int main() {
  	// imaginary solutions
  	if (sq_exp < 0) {
  		cout << "imaginary roots\n";
- 		//TODO: not fnished! 
+ 		// iot work with real numbers  
  		sq_exp = sq_exp * -1;
+ 		// finishing the equation
  		sq_exp = sqrt(sq_exp);
+ 		// -------||------
  		sq_exp = sq_exp / (2 * a);
 
+ 		// spit out data 
  		cout << "x1=" << root1 << "+"<< sq_exp << "\n";
  		cout << "x1=" << root1 << "-"<< sq_exp << "\n";  
  	}
@@ -51,13 +53,13 @@ int main() {
  		cout << "one root:\n";
  		cout << "x=" << root1 << "\n";
  	}
- 	else // two roots
+ 	// two roots
+ 	else {
  		cout << "two roots:\n";
  		root1= root1 + sqrt(sq_exp) / (2*a);
  		root2= root2 - sqrt(sq_exp) / (2*a);
  		cout << "x1=" << root1 << " x2=" << root2 << "\n";
-
-	// -b/2*a +- sqrt (b^2-4ac)/2*a
-
+ 	}
+ 	// exit this shiiiit
 	return 0;
 }
