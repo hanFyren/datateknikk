@@ -10,7 +10,10 @@ string signtest(int n){      // funksjon som tester fortegn på integers, return
     string svar = "positivt"; // definerer stringen svar, og setter den til positivt.
 
     if(n < 0){
-       svar = "negativt";   // Endrer svar til negativt om dette er tilfelle
+        svar = "negativt";   // Endrer svar til negativt om dette er tilfelle
+    }
+    if(n == 0){
+        svar = "null";
     }
 
     return svar; 
@@ -38,9 +41,12 @@ int main() {
     
     if(n == 0){
         cout << "du leste ikke inn noe heltall" << endl;
+    } else if(x == 999) {
+        cout << "avsluttet med kode 999" << endl;
     } else{
-        cout << "avsluttet med kode 999 eller feil input" << endl;
+        cout << "feil input!" << endl;
+    }
 
     return 0;
-    }
+    
 }   
