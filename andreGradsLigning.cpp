@@ -61,7 +61,6 @@ int main(){
     c = lesInn("c");
 
     r = radikand(a, b, c);
-    cout << r << '\n';
     vector<complex<double>> losning = finnRotter(a, b, r);
 
     cout << "x1 " << losning[0] << endl;
