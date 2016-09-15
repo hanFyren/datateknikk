@@ -1,4 +1,4 @@
-//glidemiddel.cpp
+//middel.cpp
 //
 
 #include <iostream>
